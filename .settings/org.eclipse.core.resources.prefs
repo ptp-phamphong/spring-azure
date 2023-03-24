@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/aptech/Controller/User/CartController.java=UTF-8
+encoding//src/main/java/com/aptech/Controller/User/CustomerController.java=UTF-8
+encoding//src/main/java/com/aptech/Controller/User/InvoiceController.java=UTF-8
+encoding//src/main/java/com/aptech/Controller/User/ProductController.java=UTF-8
+encoding//src/main/java/com/aptech/Dao/InvoiceDetailDao.java=UTF-8
+encoding//src/main/java/com/aptech/Dao/ProductDao.java=UTF-8
+encoding//src/main/java/com/aptech/Dao/ProductDetailDao.java=UTF-8
+encoding//src/main/java/com/aptech/Dao/UtilDb.java=UTF-8
+encoding//src/main/java/com/aptech/MyClass/SendingEmail.java=UTF-8
