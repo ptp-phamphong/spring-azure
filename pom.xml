@@ -4,6 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.aptech</groupId>
 	<artifactId>SportShop</artifactId>
+	<packaging>war</packaging>
 	<version>1.0</version>
 
     <properties>
@@ -138,15 +139,6 @@
 	<build>
 	  <plugins>
 	  	<plugin>
-			<artifactId>maven-war-plugin</artifactId>
-			<version>2.6</version>
-			<configuration>
-				<warSourceDirectory>src/main/webapp</warSourceDirectory>
-				<failOnMissingWebXml>false</failOnMissingWebXml>
-			</configuration>
-		</plugin>
-  
-	    <plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-compiler-plugin</artifactId>
 	      <version>3.8.1</version>
@@ -155,6 +147,19 @@
 	        <target>1.7</target>
 	      </configuration>
 	    </plugin>
+	  
+	  	<plugin>
+	  		<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.6</version>
+			<configuration>
+				<warSourceDirectory>src/main/webapp</warSourceDirectory>
+				<warName>SportShop</warName>
+				<failOnMissingWebXml>false</failOnMissingWebXml>
+			</configuration>
+		</plugin>
+  
+	    
 	  </plugins>
 	</build>
 
