@@ -25,14 +25,15 @@ public class UtilDb {
 	public void connect() {
 		if (connection == null) {
             //String dbURL = "jdbc:sqlserver://localhost\\PHAMTHANHPHONG:1433;databaseName=SportShop;user=sa;password=sa";
-			String dbURL = "jdbc:mysql://localhost:3306/assignment?user=root&password=123456";
+			String dbURL = "jdbc:mysql://localhost:3306/spring_mvc?user=root&password=123456";
 			if (this.connection == null) {
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-					System.out.println("123456");
+					
 					connection = DriverManager.getConnection(dbURL);
+					System.out.println("abc456");
 				} catch (Exception e) {
-					System.out.println("123123");
+					System.out.println("abc123");
 					System.out.println(e.getMessage());
 				}
 			}

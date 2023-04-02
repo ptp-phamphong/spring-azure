@@ -129,7 +129,7 @@ public class CategoryDao {
     }
 	
 	public SportType getNewSport() {
-		String query = "SELECT TOP 1 * FROM SportType order by Id desc";
+		String query = "SELECT * FROM SportType order by Id desc limit 1";
 		Statement stm;
 		try {
 			stm = utilDb.getConnection().createStatement();

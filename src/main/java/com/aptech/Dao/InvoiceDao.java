@@ -102,7 +102,7 @@ public class InvoiceDao {
 	}
 
 	public Invoice getLast() {
-		String query = "SELECT TOP 1 * FROM Invoice ORDER BY id DESC ";
+		String query = "SELECT * FROM Invoice ORDER BY id DESC limit 1 ";
 		Statement stm;
 		try {
 			stm = utilDb.getConnection().createStatement();

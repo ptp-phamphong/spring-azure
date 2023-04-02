@@ -24,7 +24,7 @@ public class ProductDao {
 	public ArrayList<Product> getAll() {
 		ArrayList<Product> list = new ArrayList<Product>();
 
-		String query = "SELECT TOP 25 * FROM Product";
+		String query = "SELECT * FROM Product limit 40";
 		Statement stm;
 		try {
 			CategoryDao categoryDao = new CategoryDao();
@@ -52,7 +52,7 @@ public class ProductDao {
 			}
 			return list;
 		} catch (Exception ex) {
-			System.out.print("abc");
+			System.out.print(ex.getMessage());
 		}
 		return list;
 	}
@@ -60,7 +60,7 @@ public class ProductDao {
 	public ArrayList<Product> getAll_25() {
 		ArrayList<Product> list = new ArrayList<Product>();
 
-		String query = "SELECT TOP 25 * FROM Product";
+		String query = "SELECT * FROM Product limit 25";
 		Statement stm;
 		try {
 			CategoryDao categoryDao = new CategoryDao();
@@ -93,7 +93,7 @@ public class ProductDao {
 		return list;
 	}
 	public Product getNewProduct() {
-		String query = "SELECT TOP 1 * FROM Product order by Id desc";
+		String query = "SELECT * FROM Product order by Id desc limit 1";
 		Statement stm;
 		try {
 			CategoryDao categoryDao = new CategoryDao();
@@ -260,7 +260,7 @@ public class ProductDao {
 	}
 
 	public Product getLastProduct() {
-		String sql = "SELECT TOP 1 *  FROM Product ORDER BY Id DESC";
+		String sql = "SELECT * FROM Product order by Id desc limit 1;";
 		CategoryDao categoryDao = new CategoryDao();
 		try {
 			Statement stm = utilDb.getConnection().createStatement();
@@ -290,7 +290,7 @@ public class ProductDao {
 		
 		ArrayList<Product> list = new ArrayList<Product>();
 
-		String query = "SELECT TOP 4 * FROM Product ORDER BY NEWID()";
+		String query = "SELECT * FROM Product ORDER BY id limit 4;";
 		Statement stm;
 		try {
 			CategoryDao categoryDao = new CategoryDao();
@@ -325,7 +325,7 @@ public class ProductDao {
 	public ArrayList<Product> getIndexFeaturedProduct(){
 		ArrayList<Product> list = new ArrayList<Product>();
 
-		String query = "SELECT TOP 8 * FROM Product ORDER BY NEWID()";
+		String query = "SELECT * FROM Product ORDER BY id limit 8";
 		Statement stm;
 		try {
 			CategoryDao categoryDao = new CategoryDao();
@@ -361,7 +361,7 @@ public class ProductDao {
 	public ArrayList<Product> getNewestProduct(){
 		ArrayList<Product> list = new ArrayList<Product>();
 
-		String query = "SELECT TOP 8 * FROM Product ORDER BY Product.Id DESC";
+		String query = "SELECT * FROM Product ORDER BY id limit 8";
 		Statement stm;
 		try {
 			CategoryDao categoryDao = new CategoryDao();

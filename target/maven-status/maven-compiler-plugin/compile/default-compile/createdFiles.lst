@@ -1,4 +1,5 @@
 com\aptech\Dao\ProductDetailDao.class
+com\aptech\MainClass.class
 com\aptech\Controller\User\CustomerController.class
 com\aptech\Model\Customer.class
 com\aptech\Controller\User\FilterController.class
